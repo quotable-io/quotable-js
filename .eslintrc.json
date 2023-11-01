@@ -1,0 +1,39 @@
+{
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "env": {"node": true, "jest": true},
+  "plugins": [
+    "prettier"
+  ],
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "parser": "@typescript-eslint/parser",
+      "plugins": [
+        "@typescript-eslint",
+        "prettier"
+      ],
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier"
+      ],
+      "env": {"node": true, "browser": true, "jest": true},
+      "parserOptions": {
+        "ecmaVersion": 2022,
+        "sourceType": "module"
+      },
+      "rules": {
+        "@typescript-eslint/no-explicit-any": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,2407 @@
+{
+  "metadata": {
+    "toolPackage": "@microsoft/api-extractor",
+    "toolVersion": "7.34.4",
+    "schemaVersion": 1011,
+    "oldestForwardsCompatibleVersion": 1001,
+    "tsdocConfig": {
+      "$schema": "https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json",
+      "noStandardTags": true,
+      "tagDefinitions": [
+        {
+          "tagName": "@alpha",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@beta",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@defaultValue",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@decorator",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@deprecated",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@eventProperty",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@example",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@experimental",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@inheritDoc",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@internal",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@label",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@link",
+          "syntaxKind": "inline",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@override",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@packageDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@param",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@privateRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@public",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@readonly",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@remarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@returns",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@sealed",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@see",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@throws",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@typeParam",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@virtual",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@betaDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@internalRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@preapproved",
+          "syntaxKind": "modifier"
+        }
+      ],
+      "supportForTags": {
+        "@alpha": true,
+        "@beta": true,
+        "@defaultValue": true,
+        "@decorator": true,
+        "@deprecated": true,
+        "@eventProperty": true,
+        "@example": true,
+        "@experimental": true,
+        "@inheritDoc": true,
+        "@internal": true,
+        "@label": true,
+        "@link": true,
+        "@override": true,
+        "@packageDocumentation": true,
+        "@param": true,
+        "@privateRemarks": true,
+        "@public": true,
+        "@readonly": true,
+        "@remarks": true,
+        "@returns": true,
+        "@sealed": true,
+        "@see": true,
+        "@throws": true,
+        "@typeParam": true,
+        "@virtual": true,
+        "@betaDocumentation": true,
+        "@internalRemarks": true,
+        "@preapproved": true
+      },
+      "reportUnsupportedHtmlElements": false
+    }
+  },
+  "kind": "Package",
+  "canonicalReference": "@lukepeavey/api-client-test-package!",
+  "docComment": "",
+  "name": "@lukepeavey/api-client-test-package",
+  "preserveMemberOrder": false,
+  "members": [
+    {
+      "kind": "EntryPoint",
+      "canonicalReference": "@lukepeavey/api-client-test-package!",
+      "name": "",
+      "preserveMemberOrder": false,
+      "members": [
+        {
+          "kind": "Interface",
+          "canonicalReference": "@lukepeavey/api-client-test-package!Author:interface",
+          "docComment": "/**\n * An object representing a single Author\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface Author "
+            }
+          ],
+          "fileUrlPath": "dist/types/types.d.ts",
+          "releaseTag": "Public",
+          "name": "Author",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Author#bio:member",
+              "docComment": "/**\n * A short bio of authors (from wikipedia)\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "bio: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "bio",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Author#description:member",
+              "docComment": "/**\n * A one line description of the author (source wikipedia)\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "description: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "description",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Author#id:member",
+              "docComment": "/**\n * The author id\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "id: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "id",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Author#link:member",
+              "docComment": "/**\n * A link to the authors wikipedia page\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "link: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "link",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Author#name:member",
+              "docComment": "/**\n * The full name of the author\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "name: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "name",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Author#quoteCount:member",
+              "docComment": "/**\n * The number of quotations by this author\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "quoteCount: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "quoteCount",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Author#slug:member",
+              "docComment": "/**\n * A url friendly id for the author, based on the authors name\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "slug: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "slug",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@lukepeavey/api-client-test-package!authors:function(1)",
+          "docComment": "/**\n * Gets a paginated list of authors matching the given parameters.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function authors(params: "
+            },
+            {
+              "kind": "Reference",
+              "text": "ListAuthorsParams",
+              "canonicalReference": "@lukepeavey/api-client-test-package!ListAuthorsParams:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "Promise",
+              "canonicalReference": "!Promise:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "Connection",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Connection:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "Author",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Author:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ">>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dist/types/methods/authors.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 9
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "params",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "authors"
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@lukepeavey/api-client-test-package!Connection:interface",
+          "docComment": "/**\n * A paginated API response\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface Connection<T> "
+            }
+          ],
+          "fileUrlPath": "dist/types/types.d.ts",
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "name": "Connection",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Connection#count:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "count: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "count",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Connection#page:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "page: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "page",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Connection#results:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "results: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "T[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "results",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Connection#totalCount:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "totalCount: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "totalCount",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Connection#totalPages:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "totalPages: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "totalPages",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@lukepeavey/api-client-test-package!getAuthor:function(1)",
+          "docComment": "/**\n * Get a single author by id\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function getAuthor(params: "
+            },
+            {
+              "kind": "Reference",
+              "text": "GetAuthorParams",
+              "canonicalReference": "@lukepeavey/api-client-test-package!GetAuthorParams:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "Promise",
+              "canonicalReference": "!Promise:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "Author",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Author:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ">"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dist/types/methods/getAuthor.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 7
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "params",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "getAuthor"
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@lukepeavey/api-client-test-package!GetAuthorParams:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface GetAuthorParams "
+            }
+          ],
+          "fileUrlPath": "dist/types/methods/getAuthor.d.ts",
+          "releaseTag": "Public",
+          "name": "GetAuthorParams",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!GetAuthorParams#id:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "id?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "id",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!GetAuthorParams#slug:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "slug?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "slug",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@lukepeavey/api-client-test-package!getQuote:function(1)",
+          "docComment": "/**\n * Get a single quote by id\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function getQuote(params: "
+            },
+            {
+              "kind": "Reference",
+              "text": "GetQuoteParams",
+              "canonicalReference": "@lukepeavey/api-client-test-package!GetQuoteParams:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "Promise",
+              "canonicalReference": "!Promise:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "Quote",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Quote:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ">"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dist/types/methods/getQuote.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 7
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "params",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "getQuote"
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@lukepeavey/api-client-test-package!GetQuoteParams:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface GetQuoteParams "
+            }
+          ],
+          "fileUrlPath": "dist/types/methods/getQuote.d.ts",
+          "releaseTag": "Public",
+          "name": "GetQuoteParams",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!GetQuoteParams#id:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "id?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "id",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@lukepeavey/api-client-test-package!ListAuthorsParams:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface ListAuthorsParams "
+            }
+          ],
+          "fileUrlPath": "dist/types/methods/authors.d.ts",
+          "releaseTag": "Public",
+          "name": "ListAuthorsParams",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!ListAuthorsParams#ids:member",
+              "docComment": "/**\n * An array containing one or more author ids.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "ids: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "ids",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!ListAuthorsParams#limit:member",
+              "docComment": "/**\n * The maximum number of results to return per page\n *\n * @defaultValue\n *\n * 20\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "limit?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "limit",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!ListAuthorsParams#order:member",
+              "docComment": "/**\n * The order in which results are sorted (ascending / descending)\n *\n * @defaultValue\n *\n * SortOrder.ascending\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "order?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "SortOrder",
+                  "canonicalReference": "@lukepeavey/api-client-test-package!~SortOrder:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "order",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!ListAuthorsParams#page:member",
+              "docComment": "/**\n * The page number of results to return for pagination\n *\n * @defaultValue\n *\n * 1\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "page?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "page",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!ListAuthorsParams#slug:member",
+              "docComment": "/**\n * An array containing one or more author \"slugs\". slugs are url friendly ids that are derived from the authors name.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "slug?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "slug",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!ListAuthorsParams#sortBy:member",
+              "docComment": "/**\n * the criteria used to sort the results\n *\n * @defaultValue\n *\n * AuthorSortBy.dateAdded\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "sortBy?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "AuthorSortBy",
+                  "canonicalReference": "@lukepeavey/api-client-test-package!~AuthorSortBy:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "sortBy",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@lukepeavey/api-client-test-package!ListQuotesParams:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface ListQuotesParams "
+            }
+          ],
+          "fileUrlPath": "dist/types/methods/quotes.d.ts",
+          "releaseTag": "Public",
+          "name": "ListQuotesParams",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!ListQuotesParams#author:member",
+              "docComment": "/**\n * Filter quotes by author\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "author?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "author",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!ListQuotesParams#ids:member",
+              "docComment": "/**\n * An array of quote ids\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "ids: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "ids",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!ListQuotesParams#limit:member",
+              "docComment": "/**\n * The maximum number of results to return per page\n *\n * @defaultValue\n *\n * 20\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "limit?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "limit",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!ListQuotesParams#order:member",
+              "docComment": "/**\n * The order in which quotes are sorted\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "order?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "SortOrder",
+                  "canonicalReference": "@lukepeavey/api-client-test-package!~SortOrder:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "order",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!ListQuotesParams#page:member",
+              "docComment": "/**\n * The page number of results to return for pagination\n *\n * @defaultValue\n *\n * 1\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "page?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "page",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!ListQuotesParams#sortBy:member",
+              "docComment": "/**\n * The criteria used to sort the list of quotations\n *\n * @defaultValue\n *\n * QuoteSortBy.DateAdded\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "sortBy?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "QuoteSortBy",
+                  "canonicalReference": "@lukepeavey/api-client-test-package!~QuoteSortBy:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "sortBy",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!ListQuotesParams#tags:member",
+              "docComment": "/**\n * Filter quotes by tag\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "tags?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "tags",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@lukepeavey/api-client-test-package!ListTagsParams:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface ListTagsParams "
+            }
+          ],
+          "fileUrlPath": "dist/types/methods/tags.d.ts",
+          "releaseTag": "Public",
+          "name": "ListTagsParams",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!ListTagsParams#limit:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "limit?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "limit",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!ListTagsParams#order:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "order?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "SortOrder",
+                  "canonicalReference": "@lukepeavey/api-client-test-package!~SortOrder:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "order",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!ListTagsParams#page:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "page?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "page",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!ListTagsParams#slug:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "slug?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "slug",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!ListTagsParams#sortBy:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "sortBy?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TagSortBy",
+                  "canonicalReference": "@lukepeavey/api-client-test-package!~TagSortBy:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "sortBy",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@lukepeavey/api-client-test-package!Quote:interface",
+          "docComment": "/**\n * An object representing a single quotation\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface Quote "
+            }
+          ],
+          "fileUrlPath": "dist/types/types.d.ts",
+          "releaseTag": "Public",
+          "name": "Quote",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Quote#author:member",
+              "docComment": "/**\n * The full name of the person the quotation is attributed to\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "author: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "author",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Quote#authorId:member",
+              "docComment": "/**\n * the id of the author\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "authorId: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "authorId",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Quote#authorSlug:member",
+              "docComment": "/**\n * A url friendly id that can be used to get details about the author\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "authorSlug: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "authorSlug",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Quote#content:member",
+              "docComment": "/**\n * The quotation text\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "content: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "content",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Quote#id:member",
+              "docComment": "/**\n * A unique id for this quote\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "id: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "id",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Quote#length:member",
+              "docComment": "/**\n * The length of the quote (number of characters)\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "length: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "length",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@lukepeavey/api-client-test-package!quotes:function(1)",
+          "docComment": "/**\n * Get a paginated list of all quotes matching the given query parameters\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function quotes(params: "
+            },
+            {
+              "kind": "Reference",
+              "text": "ListQuotesParams",
+              "canonicalReference": "@lukepeavey/api-client-test-package!ListQuotesParams:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "Promise",
+              "canonicalReference": "!Promise:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "Connection",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Connection:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "Quote",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Quote:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ">>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dist/types/methods/quotes.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 9
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "params",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "quotes"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@lukepeavey/api-client-test-package!random:function(1)",
+          "docComment": "/**\n * Get one or more random quotes\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function random(params: "
+            },
+            {
+              "kind": "Reference",
+              "text": "RandomQuotesParams",
+              "canonicalReference": "@lukepeavey/api-client-test-package!RandomQuotesParams:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "Promise",
+              "canonicalReference": "!Promise:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "Quote",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Quote:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "[]>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dist/types/methods/random.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 7
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "params",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "random"
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@lukepeavey/api-client-test-package!RandomQuotesParams:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface RandomQuotesParams "
+            }
+          ],
+          "fileUrlPath": "dist/types/methods/random.d.ts",
+          "releaseTag": "Public",
+          "name": "RandomQuotesParams",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!RandomQuotesParams#author:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "author?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "author",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!RandomQuotesParams#limit:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "limit?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "limit",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!RandomQuotesParams#maxLength:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "maxLength?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "maxLength",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!RandomQuotesParams#minLength:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "minLength?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "minLength",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!RandomQuotesParams#tags:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "tags?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "tags",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@lukepeavey/api-client-test-package!search:var",
+          "docComment": "/**\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "search: "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    quotes: typeof "
+            },
+            {
+              "kind": "Reference",
+              "text": "searchQuotes",
+              "canonicalReference": "@lukepeavey/api-client-test-package!~searchQuotes:function"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n    authors: typeof "
+            },
+            {
+              "kind": "Reference",
+              "text": "searchAuthors",
+              "canonicalReference": "@lukepeavey/api-client-test-package!~searchAuthors:function"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n}"
+            }
+          ],
+          "fileUrlPath": "dist/types/index.d.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "search",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@lukepeavey/api-client-test-package!SearchAuthorParams:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface SearchAuthorParams "
+            }
+          ],
+          "fileUrlPath": "dist/types/methods/searchAuthors.d.ts",
+          "releaseTag": "Public",
+          "name": "SearchAuthorParams",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!SearchAuthorParams#autocomplete:member",
+              "docComment": "/**\n * Enable autocomplete search\n *\n * @defaultValue\n *\n * true\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "autocomplete?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "autocomplete",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!SearchAuthorParams#limit:member",
+              "docComment": "/**\n * The maximum number of results to return per page\n *\n * @defaultValue\n *\n * 20\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "limit?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "limit",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!SearchAuthorParams#matchThreshold:member",
+              "docComment": "/**\n * Sets the minimum number of search terms (words) that must match for an author to be included in results. Basically, if this is set to 1, the results will include all authors that match at least one part of the name. So query=\"John F. Kennedy\" the results would include all authors that match either \"john\" OR \"kennedy\".\n *\n * If this is set to 2: when the search query includes two or more \"terms\", at least two of those terms must match. So query=\"John F. Kennedy\" would only return authors that match \"John\" AND \"Kennedy\".\n *\n * @defaultValue\n *\n * 2\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "matchThreshold?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "matchThreshold",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!SearchAuthorParams#page:member",
+              "docComment": "/**\n * The page number of results to return for pagination\n *\n * @defaultValue\n *\n * 1\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "page?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "page",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!SearchAuthorParams#query:member",
+              "docComment": "/**\n * The search query\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "query: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "query",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@lukepeavey/api-client-test-package!SearchQuoteParams:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface SearchQuoteParams "
+            }
+          ],
+          "fileUrlPath": "dist/types/methods/searchQuotes.d.ts",
+          "releaseTag": "Public",
+          "name": "SearchQuoteParams",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!SearchQuoteParams#fields:member",
+              "docComment": "/**\n * Specify the fields to search by. This takes a comma separated list of field names. Supported search fields are \"content\", \"author\", \"tags\". By default, it will search by all fields simultaneously.\n *\n * @defaultValue\n *\n * \"content,author,tags\"\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "fields?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "fields",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!SearchQuoteParams#fuzzyMaxEdits:member",
+              "docComment": "/**\n * The maximum number of single-character edits required to match the specified search term. Setting this to zero disables fuzzy matching.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "fuzzyMaxEdits?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "fuzzyMaxEdits",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!SearchQuoteParams#fuzzyMaxExpansions:member",
+              "docComment": "/**\n * When fuzzy search is enabled, this is the maximum number of variations to generate and search for. This limit applies on a per-token basis.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "fuzzyMaxExpansions: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "fuzzyMaxExpansions",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!SearchQuoteParams#limit:member",
+              "docComment": "/**\n * The maximum number of results to return per page\n *\n * @defaultValue\n *\n * 20\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "limit?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "limit",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!SearchQuoteParams#page:member",
+              "docComment": "/**\n * The page number of results to return for pagination\n *\n * @defaultValue\n *\n * 1\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "page?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "page",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!SearchQuoteParams#query:member",
+              "docComment": "/**\n * The search string. The query can be wrapped in quotes to search for an exact phrase.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "query: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "query",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@lukepeavey/api-client-test-package!Tag:interface",
+          "docComment": "/**\n * An object representing a single Tag\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface Tag "
+            }
+          ],
+          "fileUrlPath": "dist/types/types.d.ts",
+          "releaseTag": "Public",
+          "name": "Tag",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Tag#_id:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "_id: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "_id",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Tag#name:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "name: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "name",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Tag#slug:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "slug: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "slug",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@lukepeavey/api-client-test-package!tags:function(1)",
+          "docComment": "/**\n * Get a list of all tags\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function tags(params: "
+            },
+            {
+              "kind": "Reference",
+              "text": "ListTagsParams",
+              "canonicalReference": "@lukepeavey/api-client-test-package!ListTagsParams:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "Promise",
+              "canonicalReference": "!Promise:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "Connection",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Connection:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "Tag",
+              "canonicalReference": "@lukepeavey/api-client-test-package!Tag:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ">>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dist/types/methods/tags.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 9
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "params",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "tags"
+        }
+      ]
+    }
+  ]
+}

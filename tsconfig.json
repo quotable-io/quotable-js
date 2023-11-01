@@ -1,0 +1,23 @@
+{
+  "include": ["lib/*"],
+  "compilerOptions": {
+    "strict": true,
+
+    "forceConsistentCasingInFileNames": true,
+    "target": "ES2022",
+    "moduleResolution": "Node",
+    "declarationDir": "dist/types",
+    "outDir": "dist",
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "module": "ESNext",
+    "lib": ["DOM", "ES2022"],
+    "declaration": true,
+    "skipLibCheck": true,
+    "emitDeclarationOnly": true,
+    "esModuleInterop": true
+  },
+  "ts-node": {
+    "esm": true
+  }
+}

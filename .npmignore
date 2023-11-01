@@ -1,0 +1,14 @@
+lib
+scripts
+.vscode
+__tests__
+examples
+node_modules
+temp
+api-extractor.json
+.prettierrc.json
+tsconfig.json
+.npmignore
+.eslitrc.json
+.eslintignore
+.babelrc.cjs
