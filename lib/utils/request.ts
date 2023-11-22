@@ -1,6 +1,5 @@
 import { APIResponse } from '../types'
 import parseTagsParam from './parseTagsParam'
-import { stringify } from './queryString'
 import { renameIdProperty } from './renameIdProperty'
 const API_URL = `https://api.quotable.io`
 /**
@@ -18,7 +17,8 @@ export function requestURL(PATH: string, params: any = {}): string {
   if (params.order) {
     params.order = String(params.order).toLowerCase()
   }
-  return `${API_URL}${PATH}${stringify(params)}`
+  const searchParams = new URLSearchParams(params)
+  return `${API_URL}${PATH}?${searchParams.toString()}`
 }
 
 /**
