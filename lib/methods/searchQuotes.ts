@@ -1,10 +1,10 @@
 import request from '../utils/request'
-import { Connection, Quote, APIResponse } from '../types'
+import { Collection, Quote, APIResponse } from '../types'
 
 /**
  * @public
  */
-export interface SearchQuoteParams {
+export interface SearchQuotesParams {
   /**
    * The search string. The query can be wrapped in quotes to search for an exact
    * phrase.
@@ -47,9 +47,9 @@ export interface SearchQuoteParams {
  * @public
  */
 export async function searchQuotes(
-  params: SearchQuoteParams
-): Promise<APIResponse<Connection<Quote>>> {
-  const response: APIResponse<Connection<Quote>> = await request(
+  params: SearchQuotesParams
+): Promise<APIResponse<Collection<Quote>>> {
+  const response: APIResponse<Collection<Quote>> = await request(
     '/search/quotes',
     params
   )

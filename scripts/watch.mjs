@@ -8,12 +8,14 @@ const dir = dirname(fileURLToPath(import.meta.url))
 
 const options = {
   recursive: true,
-
   delay: 500,
 }
 
+console.log('npm run build')
+shell.exec('npm run build')
+console.log('watching for changes... ')
 function onChange() {
-  console.log('build')
+  console.log('npm run build')
   shell.exec('npm run build')
 }
 

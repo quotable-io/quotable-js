@@ -3,48 +3,49 @@ import { quotes, ListQuotesParams } from './methods/quotes'
 import { random, RandomQuotesParams } from './methods/random'
 import { getAuthor, GetAuthorParams } from './methods/getAuthor'
 import { getQuote, GetQuoteParams } from './methods/getQuote'
-import { searchAuthors, SearchAuthorParams } from './methods/searchAuthors'
-import { searchQuotes, SearchQuoteParams } from './methods/searchQuotes'
-import { tags, ListTagsParams } from './methods/tags'
-import { Quote, Author, Tag, Connection } from './types'
-
-/**
- * @public
- */
-const search = {
-  quotes: searchQuotes,
-  authors: searchAuthors,
-}
-
-const quotable = {
-  authors,
-  quotes,
-  random,
-  getAuthor,
-  getQuote,
-  tags,
+import {
   search,
-}
+  SearchQuotesParams,
+  SearchAuthorsParams,
+} from './methods/search'
+
+// import { tags, ListTagsParams } from './methods/tags'
+import {
+  Author,
+  QuoteWithAuthorDetails,
+  QuotesCollection,
+  AuthorsCollection,
+  SortOrder,
+  APIResponse,
+  SuccessfulResponse,
+  ErrorResponse,
+  Tag,
+  Collection,
+} from './types'
 
 export {
-  Quote,
+  // Export types
+  QuoteWithAuthorDetails,
   Author,
   Tag,
-  Connection,
+  Collection,
+  QuotesCollection,
+  AuthorsCollection,
   ListAuthorsParams,
   ListQuotesParams,
   RandomQuotesParams,
   GetAuthorParams,
   GetQuoteParams,
-  SearchAuthorParams,
-  SearchQuoteParams,
-  ListTagsParams,
-  authors,
+  SearchAuthorsParams,
+  SearchQuotesParams,
+  SortOrder,
+  APIResponse,
+  SuccessfulResponse,
+  ErrorResponse,
   quotes,
+  authors,
   random,
+  search,
   getAuthor,
   getQuote,
-  tags,
-  search,
-  quotable,
 }

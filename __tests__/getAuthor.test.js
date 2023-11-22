@@ -1,9 +1,18 @@
-import { quotable } from '../lib'
+import * as quotable from '../lib'
+import * as schema from './schema/index'
 
 describe('quotable.getAuthor()', () => {
-  describe('when called with a valid author slug', () => {
-    test.todo('Response status is OK')
-    test.todo('Response data is an Author object ')
-    test.todo('Returns the correct author')
+  test('Responds with 404 when called without params', async () => {
+    const { error, data } = await quotable.getAuthor()
+    expect(data).toBe(null)
+    console.log(error)
+  })
+
+  test('returns correct author given a valid slug', async () => {
+    const slug = 'abraham-lincoln'
+    const { error, data } = await quotable.getAuthor({ slug })
+    expect(error).toBe(null)
+    expect(data.slug).toEqual(slug)
+    expect(data).toMatchSchema(schema.Author)
   })
 })

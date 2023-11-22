@@ -1,5 +1,5 @@
 import request from '../utils/request'
-import { SortOrder, Connection, Tag, APIResponse } from '../types'
+import { SortOrder, Collection, Tag, APIResponse } from '../types'
 
 type TagSortBy = 'name' | 'dateAdded' | 'dateModified' | 'quoteCount'
 
@@ -20,7 +20,7 @@ export interface ListTagsParams {
  */
 export async function tags(
   params: ListTagsParams
-): Promise<APIResponse<Connection<Tag>>> {
-  const response: APIResponse<Connection<Tag>> = await request('/tags', params)
+): Promise<APIResponse<Collection<Tag>>> {
+  const response: APIResponse<Collection<Tag>> = await request('/tags', params)
   return response
 }

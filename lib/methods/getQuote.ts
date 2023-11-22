@@ -1,11 +1,12 @@
 import request from '../utils/request'
-import { Quote, Author, QuoteWithAuthor, APIResponse } from '../types'
+import { Quote, Author, QuoteWithAuthorDetails, APIResponse } from '../types'
+import { getAuthorDetails } from '../utils/GetAuthorDetails'
 
 /**
  * @public
  */
 export interface GetQuoteParams {
-  id?: string
+  id: string
 }
 
 /**
@@ -14,41 +15,28 @@ export interface GetQuoteParams {
  */
 export async function getQuote(
   params: GetQuoteParams
-): Promise<APIResponse<QuoteWithAuthor>> {
-  try {
-    if (!params.id) {
-      throw new Error('Missing required parameter: id')
-    }
-    const response: APIResponse<Quote> = await request(`/quotes/${params.id}`)
-    if (response.status === 'ERROR') {
-      return response
-    }
+): Promise<APIResponse<QuoteWithAuthorDetails>> {
+  if (!params?.id) {
+    return { data: null, error: { message: 'Missing required parameter: id' } }
+  }
+  const response: APIResponse<Quote> = await request(`/quotes/${params.id}`)
+  if (response.error !== null) {
+    return response
+  }
 
-    const slug = response.data.authorSlug
-    const authorResponse: APIResponse<Author> = await request(
-      `/authors/slug/${slug}`
-    )
-    if (authorResponse.status === 'ERROR') {
-      return authorResponse
-    }
+  // If this quotes request returned an error response...
+  // Return an an error response
+  if (response.error !== null) {
+    return response
+  }
+  const data = await getAuthorDetails([response.data])
 
-    const data = {
-      ...response.data,
-      author: authorResponse.data,
-    }
-
-    return { ...response, data }
-  } catch (error) {
-    let message = 'Internal server error'
-    if (error instanceof Error) {
-      if (error.message) {
-        message = error.message
-      }
-    }
+  if (data !== null) {
+    return { ...response, data: data[0] }
+  } else {
     return {
-      status: 'ERROR',
-      error: { message, code: 500 },
-      data: undefined,
+      data: null,
+      error: { message: 'failed to fetch quotes', code: 500 },
     }
   }
 }

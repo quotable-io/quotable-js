@@ -1,4 +1,8 @@
-import { join } from 'path'
+import { join, dirname } from 'path'
+import { fileURLToPath } from 'url'
+
+const dir = dirname(fileURLToPath(import.meta.url))
+
 import {
   rmSync as rm,
   readFileSync as readFile,
@@ -33,9 +37,6 @@ export function eachFile(DIR, fn) {
 }
 
 export function tsConfig() {
-  const file = readFile(
-    '/Users/lukepeavey/Projects/quotable/quotable-js/tsconfig.json',
-    { encoding: 'utf-8' }
-  )
+  const file = readFile(join(dir, '../tsconfig.json'), { encoding: 'utf-8' })
   return JSON.parse(file)
 }

@@ -1,4 +1,4 @@
-import { quotable } from '../lib'
+import * as quotable from '../lib'
 
 describe('quotable.authors()', () => {
   describe('when called with no parameters', () => {

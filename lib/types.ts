@@ -1,39 +1,4 @@
 /**
- * An object representing a single quotation
- * @public
- */
-export interface Quote {
-  DateAdded: string
-  DateModified: string
-  /**
-   * A unique id for this quote
-   */
-  id: string
-  /**
-   * The quotation text
-   */
-  content: string
-  /**
-   * The full name of the person the quotation is attributed to
-   */
-  author: string
-
-  tags: string[]
-  /**
-   * A url friendly id that can be used to get details about the author
-   */
-  authorSlug: string
-  /**
-   * the id of the author
-   */
-  authorId: string
-  /**
-   * The length of the quote (number of characters)
-   */
-  length: number
-}
-
-/**
  * An object representing a single Author
  * @public
  */
@@ -66,13 +31,16 @@ export interface Author {
    * The number of quotations by this author
    */
   quoteCount: number
+  quotes?: Quote[]
 }
 
 /**
- * An object representing a single quote, including the author details
- * @public
+ * An quotation object returned by the quotable API.
+ * @internal
  */
-export interface QuoteWithAuthor {
+export interface Quote {
+  DateAdded: string
+  DateModified: string
   /**
    * A unique id for this quote
    */
@@ -82,15 +50,37 @@ export interface QuoteWithAuthor {
    */
   content: string
   /**
-   * The author that the quotation in attributed to
+   * The full name of the person the quotation is attributed to
    */
-  author: Author
+  author: string
+
+  /**
+   * author slug
+   */
+  authorSlug: string
+  /**
+   * author ID
+   */
+  authorId: string
+  /**
+   * A list of one or more tags
+   */
+  tags: string[]
   /**
    * The length of the quote (number of characters)
    */
   length: number
+}
 
-  tags: string[]
+/**
+ * A quotation object that includes the details about the quote author.
+ * The value of the `author` property is an `Author` object that includes
+ * details about the quote's author.
+ * @public
+ */
+export interface QuoteWithAuthorDetails
+  extends Omit<Quote, 'author' | 'authorSlug' | 'authorId'> {
+  author: Author
 }
 
 /**
@@ -107,7 +97,7 @@ export interface Tag {
  * A paginated API response
  * @public
  */
-export interface Connection<T> {
+export interface Collection<T> {
   count: number
   totalCount: number
   totalPages: number
@@ -116,24 +106,26 @@ export interface Connection<T> {
 }
 
 /**
- * The error object returned by an API method
+ * @public
  */
-interface ErrorDetails {
-  code: number
-  message: string
-}
-
 export interface SuccessfulResponse<T> {
-  status: 'OK'
   data: T
-  error: undefined
+  error: null
 }
+/**
+ * @public
+ */
 export interface ErrorResponse {
-  status: 'ERROR'
-  error: ErrorDetails
-  data: undefined
+  error: { code?: number; message: string }
+  data: null
 }
 
+/**
+ * A paginated list of authors
+ */
+export type AuthorsCollection = Collection<Author>
+
+export type QuotesCollection = Collection<QuoteWithAuthorDetails>
 /**
  * The object returned by all API methods.  If request was successful, the
  * the response will include a data object containing the response data.
@@ -141,7 +133,13 @@ export interface ErrorResponse {
  * property whose value is in an error object.
  *
  * The `status` property can be used to determine the type of response.
+ *
+ * @public
  */
 export type APIResponse<T> = SuccessfulResponse<T> | ErrorResponse
 
+/**
+ * The order in which results are sorted
+ * @public
+ */
 export type SortOrder = 'ASC' | 'ASCENDING' | 'DESC' | 'DESCENDING'

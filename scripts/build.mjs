@@ -21,7 +21,7 @@ try {
     format: 'esm',
     bundle: true,
     outfile: 'dist/index.js',
-    target: 'node14',
+    target: 'node18',
     external: ['node-fetch'],
   })
   console.log(esBuild)

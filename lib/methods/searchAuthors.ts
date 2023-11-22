@@ -1,10 +1,10 @@
 import request from '../utils/request'
-import { Connection, Author, APIResponse } from '../types'
+import { Collection, Author, APIResponse } from '../types'
 
 /**
  * @public
  */
-export interface SearchAuthorParams {
+export interface SearchAuthorsParams {
   /**
    * The search query
    */
@@ -48,9 +48,9 @@ export interface SearchAuthorParams {
  * @public
  */
 export async function searchAuthors(
-  params: SearchAuthorParams
-): Promise<APIResponse<Connection<Author>>> {
-  const response: APIResponse<Connection<Author>> = await request(
+  params: SearchAuthorsParams
+): Promise<APIResponse<Collection<Author>>> {
+  const response: APIResponse<Collection<Author>> = await request(
     '/search/authors',
     params
   )

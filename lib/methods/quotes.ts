@@ -1,19 +1,13 @@
 import request from '../utils/request'
 import {
   SortOrder,
-  Connection,
-  QuoteWithAuthor,
+  Collection,
+  QuoteWithAuthorDetails,
   Quote,
   Author,
   APIResponse,
 } from '../types'
-
-type QuoteSortBy = 'name' | 'dateAdded' | 'dateModified' | 'id' | 'author'
-
-interface TagsParam {
-  any?: string[]
-  all?: string[]
-}
+import { getAuthorDetails } from '../utils/GetAuthorDetails'
 
 /**
  * @public
@@ -23,7 +17,7 @@ export interface ListQuotesParams {
    * The criteria used to sort the list of quotations
    * @defaultValue QuoteSortBy.DateAdded
    */
-  sortBy?: QuoteSortBy
+  sortBy?: 'name' | 'dateAdded' | 'dateModified' | 'id' | 'author'
   /**
    * The order in which quotes are sorted
    */
@@ -31,11 +25,20 @@ export interface ListQuotesParams {
   /**
    * Filter quotes by tag
    */
-  tags?: TagsParam
+  tags?: string[] | { any?: string[]; all?: string[] }
   /**
    * Filter quotes by author
    */
   author?: Author
+  /**
+   * Finds quotes matching the given search term.  This parameter cannot be
+   * combined with any other filter parameters such as author, tags, ids, etc.
+   * if the `search` param is provided, all other filters will be ignored.
+   *
+   * sortBy and sortOrder will also have no effect when using this param,
+   * results are sorted by score.
+   */
+  search?: string
   /**
    * An array of quote ids
    */
@@ -58,58 +61,26 @@ export interface ListQuotesParams {
  */
 export async function quotes(
   params: ListQuotesParams = {}
-): Promise<APIResponse<Connection<QuoteWithAuthor>>> {
-  let tags = ''
-  if (params.tags) {
-    if (params.tags.all) tags = params.tags.all.join(',')
-    else if (params.tags.any) tags = params.tags.any.join('|')
-  }
+): Promise<APIResponse<Collection<QuoteWithAuthorDetails>>> {
   // Fetch the list of quotes
-  const quoteResponse: APIResponse<Connection<Quote>> = await request(
+  const quoteResponse: APIResponse<Collection<Quote>> = await request(
     '/quotes',
-    { ...params, tags }
+    params
   )
+
   // If this quotes request returned an error response...
   // Return an an error response
-  if (quoteResponse.status === 'ERROR') {
+  if (quoteResponse.error != null) {
     return quoteResponse
   }
+  const results = await getAuthorDetails(quoteResponse.data.results)
 
-  // let `quoteResults` be the array of results from the quotes request
-  // let `pageInfo` be an object containing pagination properties
-  const { results: quoteResults, ...pageInfo } = quoteResponse.data
-  const allSlugs = quoteResults.map(({ authorSlug }) => authorSlug)
-  const slugs = Array.from(new Set(allSlugs))
-
-  // Fetch the Author objects for the quote authors
-  const authorResponse: APIResponse<Connection<Author>> = await request(
-    '/authors',
-    { slugs }
-  )
-
-  // If the author request returned an error, return the error response
-  if (authorResponse.status === 'ERROR') {
-    console.warn('Failed to fetch author details for quotes')
-    return authorResponse
-  }
-
-  // let `authorResults` be the array Authors
-  const { results: authorResults } = authorResponse.data
-
-  // Create the `results` array that will be returned by this method.
-  // We take the results of the quotes request, and attach the Author object to
-  // each quote as the value of the `author` property.
-  const results: QuoteWithAuthor[] = quoteResults.map(
-    ({ authorSlug, ...quoteResult }) => {
-      const author = authorResults.find(({ slug }) => slug === authorSlug)
-      if (author === undefined) {
-        throw new Error('failed to find authors for quotes')
-      }
-      return { ...quoteResult, author }
+  if (results !== null) {
+    return { ...quoteResponse, data: { ...quoteResponse.data, results } }
+  } else {
+    return {
+      data: null,
+      error: { message: 'failed to fetch quotes', code: 500 },
     }
-  )
-  return {
-    ...quoteResponse,
-    data: { ...pageInfo, results },
   }
 }

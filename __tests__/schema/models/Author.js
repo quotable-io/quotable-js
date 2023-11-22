@@ -25,7 +25,7 @@ export const Author = {
   type: 'object',
   properties: { ...properties },
   required: [...Object.keys(properties)],
-  additionalProperties: false,
+  additionalProperties: true,
 }
 
 export const AuthorsConnection = {

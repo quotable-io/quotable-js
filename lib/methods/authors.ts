@@ -1,7 +1,5 @@
 import request from '../utils/request'
-import { Connection, Author, SortOrder, APIResponse } from '../types'
-
-type AuthorSortBy = 'name' | 'dateAdded' | 'dateModified' | 'quoteCount'
+import { SortOrder, APIResponse, AuthorsCollection } from '../types'
 
 /**
  * @public
@@ -11,7 +9,7 @@ export interface ListAuthorsParams {
    * the criteria used to sort the results
    * @defaultValue AuthorSortBy.dateAdded
    */
-  sortBy?: AuthorSortBy
+  sortBy?: 'name' | 'dateAdded' | 'dateModified' | 'quoteCount'
   /**
    * The order in which results are sorted (ascending / descending)
    * @defaultValue SortOrder.ascending
@@ -23,6 +21,10 @@ export interface ListAuthorsParams {
    *
    */
   slug?: string[]
+  /**
+   *  Alias for `slug`
+   */
+  slugs?: string[]
   /**
    * An array containing one or more author ids.
    */
@@ -44,11 +46,7 @@ export interface ListAuthorsParams {
  * @public
  */
 export async function authors(
-  params: ListAuthorsParams
-): Promise<APIResponse<Connection<Author>>> {
-  const response: APIResponse<Connection<Author>> = await request(
-    '/authors',
-    params
-  )
-  return response
+  params: ListAuthorsParams = {}
+): Promise<APIResponse<AuthorsCollection>> {
+  return request('/authors', params)
 }

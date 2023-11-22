@@ -4,6 +4,7 @@
 /es
 /cjs
 /dist
+/docs
 
 # Dependencies
 /node_modules

@@ -14,7 +14,7 @@ export interface GetAuthorParams {
  * @public
  */
 export async function getAuthor(
-  params: GetAuthorParams
+  params: GetAuthorParams = {}
 ): Promise<APIResponse<Author>> {
   let PATH: string
   if (params.slug) {
@@ -22,7 +22,13 @@ export async function getAuthor(
   } else if (params.id) {
     PATH = `/authors/${params.id}`
   } else {
-    throw new Error('Missing required parameter: slug or id')
+    return {
+      data: null,
+      error: {
+        code: 422,
+        message: 'Missing required parameter `id` or `slug`',
+      },
+    }
   }
   const response: APIResponse<Author> = await request(PATH)
   return response
