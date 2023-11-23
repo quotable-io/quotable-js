@@ -33,7 +33,7 @@ export const QuotesConnection = {
     ...connectionProperties,
     results: { type: 'array', items: Quote },
   },
-  requited: [...Object.keys(connectionProperties), 'results'],
+  required: [...Object.keys(connectionProperties), 'results'],
 }
 
 // Named Exports

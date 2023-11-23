@@ -35,5 +35,5 @@ export const AuthorsConnection = {
     ...connectionProperties,
     results: { type: 'array', items: Author },
   },
-  requited: [...Object.keys(connectionProperties), 'results'],
+  required: [...Object.keys(connectionProperties), 'results'],
 }
