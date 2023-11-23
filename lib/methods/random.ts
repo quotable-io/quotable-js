@@ -1,9 +1,5 @@
 import request from '../utils/request'
-import {
-  Quote,
-  QuoteWithAuthorDetails,
-  APIResponse,
-} from '../types'
+import { Quote, QuoteWithAuthorDetails, APIResponse } from '../types'
 import { getAuthorDetails } from '../utils/GetAuthorDetails'
 
 /**

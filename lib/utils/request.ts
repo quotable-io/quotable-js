@@ -34,21 +34,22 @@ export default async function request(
   try {
     const REQUEST_URL = requestURL(PATH, params)
     const response = await fetch(REQUEST_URL)
-    const {
-      lastItemIndex,
-      statusMessage: message,
-      statusCode: code,
-      ...rest
-    } = await response.json()
+    const json = await response.json()
+    let message
+    let data
+    if (Array.isArray(json)) {
+      data = json
+    } else {
+      message = json?.statusMessage
+      const { statusMessage, statusCode, lastItemIndex, ...rest } = json
+      data = rest
+    }
 
     // If the API response was an error object, return an error response
     if (message) {
-      return { error: { message, code }, data: null }
+      return { error: { message, code: 500 }, data: null }
     }
-
-    // Otherwise return a successful response with the data..
-    const data = renameIdProperty(rest)
-
+    data = renameIdProperty(data)
     return { data, error: null }
   } catch (error) {
     console.warn(error)
